@@ -1,0 +1,412 @@
+﻿@model IEnumerable<Erp.Models.Details_Edit>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+@section Title
+{
+    Anasayfa
+}
+
+@section Body
+{
+    @if (Request.Cookies["passwordforget"] != null)
+    {
+        Response.Cookies["passwordforget"].Expires = DateTime.Now.AddDays(-1);
+    }
+   
+    @if (Request.Cookies["Register"] != null)
+    {
+
+        <script>
+            Swal.fire({
+                position: 'top-end',
+                type: 'success',
+                title: 'Kayıt işleminiz Başarılı',
+                text: "Giriş Yapabilirsiniz",
+                showConfirmButton: true,
+                timer: 2800,
+                confirmButtonText: 'Tamam'
+            })
+        </script>
+
+        Response.Cookies["Register"].Expires = DateTime.Now.AddDays(-1);
+    }
+    @if (Request.Cookies["welcomealert"] != null)
+    {
+
+        <script>
+            Swal.fire({
+                position: 'top-end',
+                type: 'success',
+                title: 'Hoşgeldin @Request.Cookies["Username"].Value',
+                text: "Giriş Yapıldı",
+                showConfirmButton: false,
+                timer: 2800,
+                confirmButtonText: 'Tamam'
+            })
+        </script>
+
+        Response.Cookies["welcomealert"].Expires = DateTime.Now.AddDays(-1);
+    }
+
+    @if (Request.Cookies["logoutalert"] != null)
+    {
+
+        <script>
+            Swal.fire({
+                position: 'top-end',
+                type: 'success',
+                title: 'Tekrar Giriş Yap',
+                text: "@Request.Cookies["Username"].Value Hesabında Yolunda Gitmeyen Birşeyler Var",
+                showConfirmButton: false,
+                timer: 3200,
+                confirmButtonText: 'Tamam'
+            })
+        </script>
+
+        Response.Cookies["logoutalert"].Expires = DateTime.Now.AddDays(-1);
+        Response.Cookies["Username"].Expires = DateTime.Now.AddDays(-1);
+    }
+
+    @if (Request.Cookies["Signin"] != null)
+    {
+        <section class="row find_domain find_domain2 find_domain_drop collapse" id="find_domain_drop">
+            <div class="container">
+                <form action="#" class="row m0 domain_search">
+                    <div class="col-sm-2 col-md-2 col-lg-2 form_title">
+                        <h5 class="transparan">Web</h5>
+                        <h2 class="transparan">ERP</h2>
+                        <p class="transparan">Yeni Özellikleriyle <br /> Sizi Bekliyor</p>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <div class="input-group">
+                            <div>
+                                <h2 class="transparan" style="color:white;">Temanızı Değiştirin !</h2>
+                            </div>
+
+                        </div>
+                        <div style="margin-left:45px;">
+                            <ul class="nav nav-pills price_list">
+                                <li><a class="transparan" style="color:#001d58;" href="@Url.Action("NotThemeDark","Home")">Açık</a></li>
+                                <li><a class="transparan" style="color:#001d58;" href="@Url.Action("ThemeDark","Home")">Koyu</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+
+                    </div>
+                </form>
+            </div>
+        </section>
+        <div class="row m0 drop_icon"><a href="#find_domain_drop" class="domain_search_drop" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="find_domain_drop">+</a></div>
+
+    }
+    <section class="row slider">
+        <div id="home_slider3" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#home_slider3" data-slide-to="0" class="active"><img src="~/images/icons/service/tab/1.png" alt="" class="icon">Özellikler</li>
+                <li data-target="#home_slider3" data-slide-to="1"><img src="~/images/icons/service/tab/2.png" alt="" class="icon">Paylaşılabilir Hosting</li>
+                <li data-target="#home_slider3" data-slide-to="2"><img src="~/images/icons/service/tab/3.png" alt="" class="icon">Özel Hosting </li>
+                <li data-target="#home_slider3" data-slide-to="3"><img src="~/images/icons/service/tab/4.png" alt="" class="icon">Her Firmaya Özgü Çözümler</li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row">
+                                <div class="media">
+                                    <div class="media-left media-middle">
+                                        <img src="~/images/slider/2-2/1.png" alt="">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>İşlerinizi Tek Platformda Birleştirin</h4>
+                                        <h2>Her Yerden<br class="hidden-xs"> Erişim İmkanı</h2>
+                                        <p>Yüksek büyüme gösteren işletmeler ve web trafiğinizi ılımlı olarak barındıran vps sistemimizi satın alabilirsiniz ... </p>
+                                        <a class="btn btn-primary" href=" @Url.Action("Features","Features")">Daha Fazla</a>
+                                        <a href="#" class="pkg_price">$29.99</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row">
+                                <div class="media">
+                                    <div class="media-left media-middle">
+                                        <img src="~/images/slider/2-2/2.png" alt="">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>Paylaşılabilir Hosting</h4>
+                                        <h2>Dosyaları Global<br class="hidden-xs">Olarak Aktar</h2>
+                                        <p>Yüksek büyüme gösteren işletmeler ve web trafiğinizi ılımlı olarak barındıran vps sistemimizi satın alabilirsiniz ...  </p>
+                                        <a class="btn btn-primary" href=" @Url.Action("Features","Features")">Daha Fazla</a>
+                                        <a href="#" class="pkg_price">$29.99</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row">
+                                <div class="media">
+                                    <div class="media-left media-middle">
+                                        <img src="~/images/slider/2-2/3.png" alt="">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>Özel Hosting</h4>
+                                        <h2>Basit<br class="hidden-xs"> Kullanışlı Api </h2>
+                                        <p>Yüksek büyüme gösteren işletmeler ve web trafiğinizi ılımlı olarak barındıran vps sistemimizi satın alabilirsiniz ... </p>
+                                        <a class="btn btn-primary" href=" @Url.Action("Features","Features")">Daha Fazla</a>
+                                        <a href="#" class="pkg_price">$29.99</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row">
+                                <div class="media">
+                                    <div class="media-left media-middle">
+                                        <img src="~/images/slider/2-2/4.png" alt="">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>Domain Transferi</h4>
+                                        <h2>Güvenilir ,<br class="hidden-xs"> Kolay , Anlaşılır </h2>
+                                        <p>Yüksek büyüme gösteren işletmeler ve web trafiğinizi ılımlı olarak barındıran vps sistemimizi satın alabilirsiniz ... </p>
+                                        <a class="btn btn-primary" href=" @Url.Action("Features","Features")">Daha Fazla</a>
+                                        <a href="#" class="pkg_price">$29.99</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#home_slider3" role="button" data-slide="prev">
+                <span class='lnr lnr-chevron-left'></span>
+            </a>
+            <a class="right carousel-control" href="#home_slider3" role="button" data-slide="next">
+                <span class='lnr lnr-chevron-right'></span>
+            </a>
+        </div>
+    </section>
+
+    <section class="row why_choose home2">
+        <div class="container">
+            <div class="row sectionTitle">
+                <h5 class="transparan">Neden Web ERP</h5>
+                <h2 class="transparan">Çünkü</h2>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-4 cause2choose">
+                    <div class="media">
+                        <div class="media-left"><a href="#"><img src="~/images/icons/cause2choose/1.png" alt=""></a></div>
+                        <div class="media-body">
+                            <h4 class="transparan">Bir Çok Net Platformuyla Entegreli</h4>
+                            <p class="transparan">Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 cause2choose">
+                    <div class="media">
+                        <div class="media-left"><a href="#"><img src="~/images/icons/cause2choose/2.png" alt=""></a></div>
+                        <div class="media-body">
+                            <h4 class="transparan">Güvenli</h4>
+                            <p class="transparan">Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 cause2choose">
+                    <div class="media">
+                        <div class="media-left"><a href="#"><img src="~/images/icons/cause2choose/3.png" alt=""></a></div>
+                        <div class="media-body">
+                            <h4 class="transparan">Her Firmaya Özgü Çözümler</h4>
+                            <p class="transparan">Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 cause2choose">
+                    <div class="media">
+                        <div class="media-left"><a href="#"><img src="~/images/icons/cause2choose/4.png" alt=""></a></div>
+                        <div class="media-body">
+                            <h4 class="transparan">Kolay ve Anlaşılır</h4>
+                            <p class="transparan">Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 cause2choose">
+                    <div class="media">
+                        <div class="media-left"><a href="#"><img src="~/images/icons/cause2choose/5.png" alt=""></a></div>
+                        <div class="media-body">
+                            <h4 class="transparan">Teknik Destek</h4>
+                            <p class="transparan">Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 cause2choose">
+                    <div class="media">
+                        <div class="media-left"><a href="#"><img src="~/images/icons/cause2choose/7.png" alt=""></a></div>
+                        <div class="media-body">
+                            <h4 class="transparan">Her yerden Erişim</h4>
+                            <p class="transparan">Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="row service_tabs_list">
+        <div class="row m0 service_tab service_tab1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5 ico_price">
+                        <div class="row m0">
+                            <div class="ico">
+                                <img src="~/images/icons/service/tab/5.png" alt="">
+                            </div>
+                            <div class="row m0 rent"><span>$</span>29<small> Aylık</small></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-7 content">
+                        <h4>Web</h4>
+                        <h3 class="title">ERP</h3>
+                        <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget  dolor sit amet, ecc.</p>
+                        <ul class="hostpressUnList">
+                            <li>Tamamen Yönetilen Dedicated Sunucu</li>
+                            <li>Windows &amp; Linux</li>
+                            <li>Root erişimi olan Complate Control</li>
+                            <li>Özel Bant Genişliği</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Daha Fazla</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr />
+
+    <section class="row testi_news">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="row sectionTitle text-left">
+                        <h5>Müşteriler</h5>
+                        <h3>Referanslar</h3>
+                    </div>
+                    <div class="testimonial_slider owl-carousel">
+                        <div class="item">
+                            <div class="row slide m0">
+                                <div class="fleft client_img"><img src="~/images/testimonial/1.png" alt=""></div>
+                                <div class="fleft content">
+                                    <div class="counter">01</div>
+                                    <div class="row m0 quote">
+                                        <p class="transparan">Lorem ipsum dolor sit amet, ectetur adipiscing elit. viverra tellus.</p>
+                                        <p class="transparan">Vivamus finibus, quam vitae pulvinar euismod, Lorem ipsum dolor sit amet, ectetur adipiscing elit.</p>
+                                    </div>
+                                    <h5 class="client_name transparan">John Doe</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row slide slide2 m0">
+                                <div class="fleft client_img"><img src="~/images/testimonial/2.png" alt=""></div>
+                                <div class="fleft content">
+                                    <div class="counter">02</div>
+                                    <div class="row m0 quote">
+                                        <p class="transparan">Lorem ipsum dolor sit amet, ectetur adipiscing elit. viverra tellus.</p>
+                                        <p class="transparan">Vivamus finibus, quam vitae pulvinar euismod, Lorem ipsum dolor sit amet, ectetur adipiscing elit.</p>
+                                    </div>
+                                    <h5 class="client_name transparan">Baby Doe</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="row sectionTitle text-left">
+                        <h5>Son</h5>
+                        <h3>Yenilikler</h3>
+                    </div>
+                    <div class="latest_news row m0">
+                        <div class="post media">
+                            <div class="media-left">
+                                <a href="single.html"><img src="~/images/posts/latest/1.png" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <h5><a href="single.html">Erp V3.5 Yayınlandı</a></h5>
+                                <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. viverra tellus.</p>
+                                <div class="row m0 timeAgo">2 gün önce</div>
+                            </div>
+                        </div>
+                        <div class="post media">
+                            <div class="media-left">
+                                <a href="single.html"><img src="~/images/posts/latest/2.png" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <h5><a href="single.html">Erp N11 Entegrasyonu Tamamlandı</a></h5>
+                                <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. viverra tellus.</p>
+                                <div class="row m0 timeAgo">3 gün önce</div>
+                            </div>
+                        </div>
+                        <div class="post media">
+                            <div class="media-left">
+                                <a href="single.html"><img src="~/images/posts/latest/4.png" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <h5><a href="single.html">Erp B2B Uygulaması V1.0 Yayınlandı</a></h5>
+                                <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. viverra tellus.</p>
+                                <div class="row m0 timeAgo">1 hafta önce</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="row service_tabs_list">
+        <div class="row m0 service_tab service_tab1">
+            <div class="container">
+                <div class="row sectionTitle">
+                    <h5>Misafirimiz Olun</h5>
+                    <h2>Ziyaret Edin</h2>
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-5 ico_price">
+
+                        <div class="row m0">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12616.906222191854!2d27.39166352800293!3d37.76128565118512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x64b21a5a90a29e85!2zRWdlIFlhesSxbMSxbQ!5e0!3m2!1str!2str!4v1558525724081!5m2!1str!2str"
+                                    width="1170" height="415" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+}

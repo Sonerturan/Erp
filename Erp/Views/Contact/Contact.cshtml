@@ -1,0 +1,248 @@
+﻿@model Erp.Models.MailSend
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section Title
+{
+    İletişim Bilgileri
+}
+
+@section Body
+{
+
+    <section class="row">
+        <div class="row m0 contact_banner">
+            <div class="container">
+                <div class="row">
+                    <h4 class="transparan">Bize <span>Ulaşın</span></h4>
+                    <h2 class="transparan"><a href="tel:0 256 518 57 58"><i class="icon icon-call-out"></i>0 256 518 57 58</a></h2>
+                    <p class="transparan">
+                        7/24 müşteri desteğimiz mevcuttur.Her yerden arayabilir,
+                        plan ve fiyatlarımızla ilgili herhangi bir soru sorabilirsiniz.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="row contact_content">
+        <div class="container">
+
+            <div class="row form_row">
+                <div class="col-sm-7 form_side">
+                    <h2 class="part_number">01/</h2>
+                    <h3 class="part_title">Bize Mail Gönderin</h3>
+                    <h4>Talep Formunu Doldurun <br class="hidden-xs"> İletişime geçelim.</h4>
+                    <div class="contactForm row m0">
+
+                        @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <div class="form-horizontal">
+                                    
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.EmailAdress, htmlAttributes: new { @class = "col-md-2" , @style=" text-align:center;"})
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.EmailAdress, new { htmlAttributes = new { @class = "col-md-9", @style= " margin-top:2px; height:37px; color:black !important;" } })
+                                            @Html.ValidationMessageFor(model => model.EmailAdress, "", new { @class = "text-danger" })
+                                            <div class="text-danger">
+                                                @ViewBag.LoginError2
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group"  style = " margin-bottom:25px; " >
+                                        @Html.LabelFor(model => model.Subject, htmlAttributes: new { @class = "control-label col-md-2", @style = " margin-top:5px; " })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.Subject, new { htmlAttributes = new { @class = "col-md-9", @style = " margin-top:2px; height:37px; color:black !important;" } })
+                                            @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger"})
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Body, htmlAttributes: new { @class = "control-label col-md-2", @style=" margin-top:10px;" })
+                                        <div class="col-md-10" style="color:black !important">
+                                            @Html.TextAreaFor(model => model.Body,6 ,47, new { htmlAttributes = new { @class = "col-md-9" } })
+                                            @Html.ValidationMessageFor(model => model.Body, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <center>
+                                        <div class="form-group u">
+                                            <div class="col-md-offset-2 col-md-12 ">
+                                                <input style="margin-top:25px;margin-left:25px;" id="sweetalert" type="submit" value="Gönder" class="btn btn-primary" />
+                                                @if (Request.Cookies["MailSend"] != null)
+                                                {
+                                                    <script>
+                                                            Swal.fire({
+                                                                position: 'top-end',
+                                                                type: 'success',
+                                                                title: 'Mesajınız iletildi',
+                                                                showConfirmButton: true,
+                                                                timer: 2500,
+                                                                confirmButtonText: 'Tamam'
+                                                            })
+                                                    </script>
+                                                    Response.Cookies["MailSend"].Expires=DateTime.Now.AddDays(-1);
+                                                }
+                                                </div>
+                                        </div>
+                                    </center>
+                                </div>
+                            }
+                        <div id="success"> Mesajınız başarıyla gönderildi!</div>
+                        <div id="error"> Üzgünüz, yanlış bir şeyler olmalı! Lütfen tekrar deneyin.</div>
+                    </div>
+                </div>
+                <div class="col-sm-5 detail_address">
+                    <h2 class="part_number">02/</h2>
+                    <h3 class="part_title">Bize Ulaşın  </h3>
+                    <h4>İşte bilgiler ve iletişim bilgileri <br class="hidden-xs"> başvurabilirsin</h4>
+                    <div class="media">
+                        <div class="media-left"><i class="fa fa-home"></i></div>
+                        <div class="media-body media-middle">
+                            <a href="https://goo.gl/maps/YYHALtPSWMg6rcDT6" target="_blank">
+                                Yenikent Mahallesi Güzelyalı Sitesi ,No:148 , <br>Söke / AYDIN
+                            </a>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left"><i class="fa fa-phone"></i></div>
+                        <div class="media-body media-middle">
+                            <a href="tel:0 549 518 57 58"> Telefon : 0549 518 57 58</a> <br>
+                            <a href="tel:0 256 518 57 58"> Telefon : 0256 518 57 58</a>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left"><i class="fa fa-comments-o"></i></div>
+                        <div class="media-body media-middle">
+                            <a href="mailto:info@egeyazilim.net">info@egeyazilim.net</a>
+                            <ul class="nav nav-pills">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row we_support">
+                <div class="col-sm-12">
+                    <h2 class="part_number">03/</h2>
+                    <h3 class="part_title">Destekliyoruz</h3>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="media">
+                                <div class="media-left">
+                                    <i class="fa fa-comments-o"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Sohbet Desteği</h4>
+                                    <p>Mesai saatleri arasında iletişime geçebiliriz.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="media">
+                                <div class="media-left">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Canlı Destek</h4>
+                                    <p>Mesai saatleri arasında sizlere canlı destek verebiliyoruz.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="media">
+                                <div class="media-left">
+                                    <i class="fa fa-envelope-o"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4> E-posta desteği</h4>
+                                    <p>7/24 E-posta yolu ile bize ulaşabilrsiniz.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row we_support">
+                <div class="col-sm-12">
+                    <h2 class="part_number">04/</h2>
+                    <h3 class="part_title">Çalışma Saatleri</h3>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="media">
+                                <div class="media-left">
+                                    <i class="fas fa-battery-full"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Pazartesi - Cuma</h4>
+                                    <p> 09:00 - 18:00 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="media">
+                                <div class="media-left">
+                                    <i class="fas fa-battery-half"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Cumartesi</h4>
+                                    <p>09:00 - 13:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="media">
+                                <div class="media-left">
+                                    <i class="fas fa-battery-empty"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Pazar</h4>
+                                    <p>Kapalı</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <hr />
+
+    <section class="row service_tabs_list">
+        <div class="row m0 service_tab service_tab1">
+            <div class="container">
+                <div class="row sectionTitle">
+                    <h5>Misafirimiz Olun</h5>
+                    <h2>Ziyaret Edin</h2>
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-5 ico_price">
+
+                        <div class="row m0">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12616.906222191854!2d27.39166352800293!3d37.76128565118512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x64b21a5a90a29e85!2zRWdlIFlhesSxbMSxbQ!5e0!3m2!1str!2str!4v1558525724081!5m2!1str!2str"
+                                    width="1170" height="415" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+}
+
+
+
+

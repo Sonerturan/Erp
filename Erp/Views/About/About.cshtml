@@ -1,0 +1,284 @@
+﻿
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Title
+{
+    Hakkımızda
+}
+
+@section Body
+{
+
+    <section class="row page_header">
+        <div class="container">
+            <h3 class="transparan">Hakkımızda</h3>
+            <ol class="breadcrumb">
+                <li>@Html.ActionLink("Anasayfa", "Index", "Home")</li>
+                <li class="active">Hakkımızda</li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="row about_us_content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5">
+                    <img src="~/images/about-us/3.png" alt="" class="img-responsive">
+                </div>
+                <div class="col-sm-7">
+                    <div class="row sectionTitle text-left">
+                        <h5>Hakkımızda &amp;</h5>
+                        <h2>Biz Kimiz</h2>
+                    </div>
+                    <h4>Ege Yazılım Sistemleri Özgeçmişi </h4>
+                    <p>
+                        Ege Yazılım Sistemleri İthalat İhracat San. ve Tic. Ltd. Şti., 2006 yılında Aydın ili Söke ilçesinde
+                        kurulmuştur. Firmanın kuruluş amacı gelişen bilişim çağına uygun proje ve programlar üretmek,
+                        bunlarla ilgili destek vermek ve bu sistemler ile ilgili danışmanlık hizmetlerinin yürütülmesidir.
+                    </p>
+                    <hr>
+                    <h4>İş ve Kariyer Fırsatlarımız </h4>
+                    <p>
+                        Yazılım, tasarım, satış, finans ve diğer birçok departmanımızdaki iş ve kariyer
+                        fırsatlarımıza göz atabilirsiniz. Staj başvurularınızı da iletişim bölümden yapabilirsiniz.
+                        Sizi de aramızda görmekten mutluluk duyarız.
+                    </p>
+                    <hr>
+                    <h4>Kullandığımız Programlar</h4>
+                    <div class="row m0">
+                        <ul class="hostpressUnList">
+                            <li>Visual Studio</li>
+                            <li>Delphi</li>
+                            <li>Mysql</li>
+                            <li>Microsoft SQL</li>
+                            <li>Asp.net</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr />
+
+    <div class="row m0 featureTab_contents">
+        <div class="tab-content">
+            <div class="tab-pane active" role="tabpanel" id="featureT1">
+                <div class="content_row row m0">
+                    <div class="container">
+                        <div class="row sectionTitle">
+                            <h2>Vizyonumuz</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <p>
+                                    Programlama ve bilişim danışmanlığı alanında deneyime ve bilgiye dayalı yüksek teknoloji
+                                    çözümleri sunan, sürekli gelişen ve yenilikleri takip eden, profesyonel altyapıya sahip bir
+                                    şirket olmaktır. Geride bıraktığımız yıllar içerisinde otomotiv firmalarına hazırladığımız programlar,
+                                    bu firmaların müşterilerine daha kolay erişimini sağlamıştır. Bu sayede firmalar ürünlerinin tanıtım
+                                    ve pazarlama hizmetlerini daha kolay ve düzenli vermeye başlamışlardır. Yeni ürün tanıtımı yada
+                                    kampanyalar anlık gerçekleştirilebilir duruma gelmiştir. Ayrıca firmamızın otomotiv sektöründe
+                                    perakendeciler ve servisler için hazırladığı ticari program, önceki sürümlerinin geliştirilmesi
+                                    sonucunda 2012 yılı başlarında kapsadığı yeniliklerle Türkiye'nin her yanında beğenilerek kullanılmaya
+                                    başlamıştır. Bu çalışmalar ile birlikte EGE YAZILIM, 2020 yılında da daha iyi ve kaliteli hizmet
+                                    sunmayı sürdürmekte ve şu ana kadar çalıştığı ve bundan sonra çalışacağı firmalara daha kapsamlı
+                                    bilişim hizmetleri sunmayı hedeflemektedir.
+                                </p>
+                            </div>
+                            <div class="col-sm-5 img_part">
+                                <img src="~/images/icons/feature/5.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="content_row  whats_under_hood row m0">
+        <div class="container">
+            <div class="row sectionTitle">
+                <h2>Misyonumuz</h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 img_part">
+                    <img src="~/images/icons/feature/6.png" alt="">
+                </div>
+                <div class="col-sm-6">
+                    <p>
+                        Bilişim sektöründe program yazılımları geliştirmek, bu yazılımlarla ilgili yüksek kaliteli
+                        danışmanlık Hizmetleri sağlamak ve en üst seviyede müşteri memnuniyetini hedefleyen ileri teknoloji
+                        çözümleri geliştirmek ve sunmaktır.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <section class="row facts about_us_facts">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 fact"> <strong class="counter">65</strong>Mutlu müşteriler</div>
+                <div class="col-sm-3 fact"><strong class="counter">34</strong>Sunucular</div>
+                <div class="col-sm-3 fact"><strong class="counter">32</strong>Personel</div>
+                <div class="col-sm-3 fact"><strong class="counter">65</strong>Aktif Kullanıcılar</div>
+            </div>
+        </div>
+    </section>
+
+    <hr />
+
+    <section class="row contact_content">
+        <div class="container">
+            <div class="row we_support">
+                <div class="col-sm-12">
+                    <div class="row sectionTitle">
+                        <h2>Çalışma Saatlerimiz</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="media">
+                                <div class="media-left">
+                                    <i class="fas fa-battery-full"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Pazartesi - Cuma</h4>
+                                    <p> 09:00 - 18:00 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="media">
+                                <div class="media-left">
+                                    <i class="fas fa-battery-half"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Cumartesi</h4>
+                                    <p>09:00 - 13:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="media">
+                                <div class="media-left">
+                                    <i  style="background:#7bdbfb !important;" class="fas fa-battery-empty"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Pazar</h4>
+                                    <p>Kapalı</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="row team_section">
+        <div class="container">
+            <div class="row sectionTitle">
+                <h5>Biz Kimiz &amp;</h5>
+                <h2>Bizim Takımımız</h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 team_member">
+                    <div class="row m0 inner">
+                        <div class="row m0 image"><img src="~/images/team/1.png" alt=""></div>
+                        <h4  class="title transparan12">Mete Kapan</h4>
+                        <h6  class="desig transparan12">founder &amp; director</h6>
+                        <p  class="nState transparan12">Vivamus finibus quam vitae pulvina adipiscing elit.</p>
+                        <p  class="hState transparan12">Vivamus finibus quam vitae pulvina adipiscing elit.vamus finibus quam vitae pulvina adipiscing elit.vamus finibus quam vitae pulvina adipiscing elit.vamus finibus quam vitae pulvina adipiscing elit.</p>
+                        <ul class="list-unstyled ">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 team_member">
+                    <div class="row m0 inner">
+                        <div class="row m0 image"><img src="~/images/team/6.png" alt=""></div>
+                        <h4 class="title transparan12">Lina Ray</h4>
+                        <h6 class="desig transparan12">ceo</h6>
+                        <p class="nState transparan12">Vivamus finibus quam vitae pulvina adipiscing elit.</p>
+                        <p class="hState transparan12">Vivamus finibus quam vitae pulvina adipiscing elit.vamus finibus quam vitae pulvina adipiscing elit.vamus finibus quam vitae pulvina adipiscing elit.vamus finibus quam vitae pulvina adipiscing elit.</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 team_member">
+                    <div class="row m0 inner">
+                        <div class="row m0 image"><img src="~/images/team/2.png" alt=""></div>
+                        <h4 class="title transparan12">steave hoffel</h4>
+                        <h6 class="desig transparan12">head-manager</h6>
+                        <p class="nState transparan12">Vivamus finibus quam vitae pulvina adipiscing elit.</p>
+                        <p class="hState transparan12">Vivamus finibus quam vitae pulvina adipiscing elit.vamus finibus quam vitae pulvina adipiscing elit.vamus finibus quam vitae pulvina adipiscing elit.vamus finibus quam vitae pulvina adipiscing elit.</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 team_member">
+                    <div class="row m0 inner">
+                        <div class="row m0 image"><img src="~/images/team/3.png" alt=""></div>
+                        <h4 class="title transparan12">seaff cafel</h4>
+                        <h6 class="desig transparan12">manager</h6>
+                        <p class="nState transparan12">Vivamus finibus quam vitae pulvina adipiscing elit.</p>
+                        <p class="hState transparan12">Vivamus finibus quam vitae pulvina adipiscing elit.vamus finibus quam vitae pulvina adipiscing elit.vamus finibus quam vitae pulvina adipiscing elit.vamus finibus quam vitae pulvina adipiscing elit.</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 team_member">
+                    <div class="row m0 inner">
+                        <div class="row m0 image"><img src="~/images/team/4.png" alt=""></div>
+                        <h4 class="title transparan12">vicky dorren</h4>
+                        <h6 class="desig transparan12">manager</h6>
+                        <p class="nState transparan12">Vivamus finibus quam vitae pulvina adipiscing elit.</p>
+                        <p class="hState transparan12">Vivamus finibus quam vitae pulvina adipiscing elit.vamus finibus quam vitae pulvina adipiscing elit.vamus finibus quam vitae pulvina adipiscing elit.vamus finibus quam vitae pulvina adipiscing elit.</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 team_member">
+                    <div class="row m0 inner">
+                        <div class="row m0 image"><img src="~/images/team/5.png" alt=""></div>
+                        <h4 class="title transparan12">missel hen</h4>
+                        <h6 class="desig transparan12">supersior</h6>
+                        <p class="nState transparan12">Vivamus finibus quam vitae pulvina adipiscing elit.</p>
+                        <p class="hState transparan12">Vivamus finibus quam vitae pulvina adipiscing elit.vamus finibus quam vitae pulvina adipiscing elit.vamus finibus quam vitae pulvina adipiscing elit.vamus finibus quam vitae pulvina adipiscing elit.</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+}

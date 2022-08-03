@@ -1,0 +1,381 @@
+﻿@model IEnumerable<Erp.Models.Details_Edit>
+@{
+    Layout = null;
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="~/js/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+
+        Web Erp @RenderSection("Title")
+
+    </title>
+
+    <!--scroll up-->
+    <style>
+        
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+
+
+
+        #myBtn {
+            /*font-family: Elephant;*/
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            font-size: 22px;
+            /*border: none;*/
+            outline: none;
+            background-color: #FF8C00;
+            color: Black;
+            cursor: pointer;
+            padding: 20px;
+            height: 53px;
+            width: 53px;
+            /*border-radius: 64px;*/
+            line-height: 24px;
+            -webkit-border-radius: 999px;
+            -webkit-border-top-left-radius: 0;
+            -moz-border-radius: 999px;
+            -moz-border-radius-topleft: 0;
+            border-radius: 999px;
+            border-top-left-radius: 0;
+        }
+
+            #myBtn:hover {
+                line-height: 12;
+                background-color: #ffaa00;
+                font-family: Arial, Helvetica, sans-serif;
+                line-height: 21px;
+                padding: 20px;
+            }
+    </style>
+
+    <!--Favicons-->
+    <link rel="apple-touch-icon" sizes="57x57" href="~/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="~/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="~/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="~/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="~/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="~/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="~/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="~/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="~/favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="~/favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="~/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="~/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="~/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#e74c3c">
+    <meta name="msapplication-TileImage" content="~/favicon/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#e74c3c">
+
+    <!--Font awasome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/bootstrap-theme.min.css" />
+
+    <!--Loader-->
+    <link rel="stylesheet" href="~/css/spinners.css" />
+
+
+    <!-- Vendors -->
+    <link rel="stylesheet" href="~/vendors/owl.carousel/owl.carousel.css" />
+    <link rel="stylesheet" href="~/vendors/simple-line-icons/css/simple-line-icons.css" />
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/vendors/lineariconsFree/style.css" />
+    <link rel="stylesheet" href="~/css/magnific-popup.css" />
+
+    <!--Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,100,300,400italic,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!--Theme Styles-->
+    <link rel="stylesheet" href="~/css/default/style.css" />
+    <link rel="stylesheet" href="~/css/responsive/responsive.css" />
+
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+    @if (Request.Cookies["Dark2"] != null)
+    {
+
+    <link rel="stylesheet" href="~/css/themedark.css" />
+        
+    }
+</head>
+<body class="home">
+
+    <div class="preloader">
+        <div class="dots-loader">Yükleniyor ...</div>
+    </div>
+
+    <section class="row top_header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 ">Yeni Nesil Web ERP, Sizin İçin Herşeyi Düşündük...</div>
+                <div class="col-sm-6">
+                    <ul class="nav nav-pills">
+                        <li><a href="tel:0 256 518 57 58"><i class="icon-call-out"></i>0 256 518 57 58</a></li>
+                        <li><a href="mailto:info@egeyazilim.net"><i class="icon-envelope"></i>info@egeyazilim.net</a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <nav class="navbar navbar-default navbar-static-top fluid_header centered">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href=" @Url.Action("Index","Home")"><img src="~/images/logo.png" /></a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_navigation" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="main_navigation">
+                <ul class="nav navbar-nav navbar-right" style="font-size:18px;">
+                    <li class="dropdown">
+                        @Html.ActionLink("Anasayfa", "Index", "Home")
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">Kurumsal</a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Fiyatlandırma", "Pricing", "Pricing")</li>
+                            <li>@Html.ActionLink("Destek", "Support", "Support")</li>
+                            <li>@Html.ActionLink("S.S.S.", "SSS", "SSS")</li>
+                            <li>@Html.ActionLink("Bizim Takım", "OurTeam", "OurTeam")</li>
+                            <li>@Html.ActionLink("Referanslar", "References", "References")</li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("Özellikler", "Features", "Features")</li>
+                    <li class="dropdown">
+                        @Html.ActionLink("Blog", "Blog", "Blog")
+                    </li>
+                    <li>@Html.ActionLink("Hakkımızda", "About", "About")</li>
+                    <li>@Html.ActionLink("İletişim", "Contact", "Contact")</li>
+
+
+                    @if (Request.Cookies["Signin"] != null)
+                    {
+
+                        <li class="dropdown-menu login-link   signin" style="background-color:#337ab7;padding-top:2px; padding-left:0px;padding-bottom:0px; padding-right:1px; ">
+                            <a href="#" style="text-align:center; font-size: 15px; " class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i style="margin-right:6px;" class="fas fa-user-circle"></i>
+                                @Request.Cookies["Username"].Value
+
+                            </a>
+                            <ul class="dropdown-menu" style="margin-top:0px; left: auto;top:auto;right: -1px;">
+
+                                <li style="background-color:#f95732; padding-top:3px; padding-bottom:3px; margin-bottom:2px; ">
+                                    <table style="width:135px;margin-left:10px;">
+                                        <tr>
+                                            <td><i style="color:white !important; " class="fas fa-user-edit"></i></td>
+                                            <td><a style="padding: 0 1px; margin-left:10px;" href="@Url.Action("DetailsEdit","DetailsEdit")">Hesap Bilgileri</a></td>
+                                        </tr>
+                                    </table>
+                                </li>
+
+                                <li style="background-color:#f95732; padding-top:3px; padding-bottom:3px; margin-bottom:2px;">
+                                    <table style="width:135px;margin-left:10px;">
+                                        <tr>
+                                            <td><i style="color:white !important;" class="fas fa-user-friends"></i></td>
+                                            <td><a style="padding: 0 1px;  margin-Left:10px;" href="@Url.Action("Sign_in","Sign_in")">Hesap Değiştir</a></td>
+                                        </tr>
+                                    </table>
+                                </li>
+
+                                <li style="background-color:#f95732; padding-top:3px; padding-bottom:3px; margin-bottom:2px;">
+                                    <table style="width:135px;margin-left:10px;">
+                                        <tr>
+                                            <td><i style="color:white !important;" class="fas fa-user-cog"></i></td>
+                                            <td><a style="padding: 0 1px;  margin-right:15px;" href="@Url.Action("Index","Home")">Ayarlar</a></td>
+                                        </tr>
+                                    </table>
+                                </li>
+
+                                <li style="background-color:#f95732; padding-top:3px; padding-bottom:3px; margin-bottom:0px;">
+                                    <table style="width:135px;margin-left:10px;">
+                                        <tr>
+                                            <td><i style="color:white !important; " class="fas fa-user-times"></i></td>
+                                            <td><a style="padding: 0 1px; " href="@Url.Action("CookieDelete","Home")">Çıkış Yap</a></td>
+                                        </tr>
+                                    </table>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    }
+                    else
+                    {
+                        <li class="login-link"><a href="@Url.Action("Sign_in","Sign_in")">Giriş Yap</a></li>
+                    }
+
+
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+
+
+
+    @RenderSection("Body")
+
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><b>^ </b></button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+    <footer class="row">
+        <div class="top_footer row m0">
+            <div class="container">
+                <div class="row m0 quick_contact">
+                    <ul class="nav nav-pills">
+                        <li style="margin-left:22px;"><a href="tel:0 256 518 57 58"><i class="lnr lnr-phone"></i>0 256 518 57 58</a></li>
+                        <li><a href="mailto:info@egeyazlilim.net"><i class="lnr lnr-envelope"></i>info@egeyazlilim.net</a></li>
+                        <li><a href=" @Url.Action("Support","Support")"><i class="lnr lnr-bubble"></i>canlı destek al</a></li>
+                    </ul>
+                </div>
+                <div class="row shortKnowledge">
+                    <div class="col-sm-6 about">
+                        <h4 style="background:#0c112a !important;"><a href="@Url.Action("Index","Home")"><img src="~/images/logo2.png" alt=""></a></h4>
+                        <p style="background:#0c112a !important; color:white !important;">Lorem ipsum dolor sit amet, ectetur adipiscing elit.viverra tellus. Vivamus finibus, quam vitae pulvinar euismod, Lorem ipsum dolor sit amet, ectetur adipiscing elit.ectetur adipiscing elit.viverra tellusivamus finibus, quam vitae pulvinar euismod,</p>
+                    </div>
+                    <div class="col-sm-6 product">
+                        <h4 style="background:#0c112a !important;">Yazılımlar</h4>
+                        <ul class="product_list nav">
+                            <li><a href="#">Webhosting</a></li>
+                            <li><a href="#">Erp</a></li>
+                            <li><a href="#">B2B</a></li>
+                            <li><a href="#">B2C</a></li>
+                            <li><a href="hosting-dedicated.html">dedicated hosting</a></li>
+                            <li><a href="#">Crm</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row beInContact m0">
+                    <div class="btn-group country_select">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="flag"><img src="~/images/icons/footer/flag.png" alt=""></span>Bayiler<i class="lnr lnr-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">İstanbul</a></li>
+                            <li><a href="#">İzmir</a></li>
+                            <li><a href="#">Ankara</a></li>
+                        </ul>
+                    </div>
+                    <div class="social_icos">
+                        <ul class="nav">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="subscribe_form">
+                        <form action="#" class="form-inline">
+                            <div class="form-group">
+                                <label>Gelişmeler <br>  için<small>Abone Ol</small></label>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Email Address">
+                                    <span class="input-group-addon"><input type="submit" value="Kaydet" class="btn"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row m0 copyright_line">
+            Copyright &copy; 2019 xxerp.com. Tüm Hakları Saklıdır.
+        </div>
+    </footer>
+
+    <!--jQuery, Bootstrap and other vendor JS-->
+    <!--jQuery-->
+    <script src="~/js/jquery-2.1.4.min.js"></script>
+
+    <!--Bootstrap JS-->
+    <script src="~/js/bootstrap.min.js"></script>
+
+    <!--Bootstrap Select-->
+    <script src="~/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+
+    <!--Owl Carousel-->
+    <script src="~/vendors/owl.carousel/owl.carousel.min.js"></script>
+
+    <!--Waypoints-->
+    <script src="~/vendors/waypoints/waypoints.min.js"></script>
+
+    <!--Counter Up-->
+    <script src="~/vendors/counterup/jquery.counterup.min.js"></script>
+
+    <!--Magnific Popup-->
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+
+    <!--Isotope-->
+    <script src="~/vendors/isotope/isotope.min.js"></script>
+
+    <!--Isotope-->
+    <script src="~/vendors/infinitescrol/jquery.infinitescroll.min.js"></script>
+
+    <!--Theme JS-->
+    <script src="~/js/theme.js"></script>
+</body>
+</html>

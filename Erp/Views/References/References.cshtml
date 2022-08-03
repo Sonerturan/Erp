@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "References";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Title
+{
+    Referanslar
+}
+
+@section Body
+{
+
+    <section class="row page_header">
+        <div class="container">
+            <h3>Referanslar</h3>
+            <ol class="breadcrumb">
+                <li>@Html.ActionLink("Anasayfa", "Index", "Home")</li>
+                <li class="active">Referanslar</li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="row portfolio_content">
+        <div class="container">
+            <div class="row sectionTitle">
+                <h5>Neden Biz &amp;</h5>
+                <h2>Referanslarımız</h2>
+            </div>
+            <div class="row col3">
+                <div class="col-sm-4 portfolio">
+                    <div class="row image m0">
+                        <img src="~/images/portfolio/1.jpg" alt="">
+                        <a href="~/images/portfolio/1.jpg" class="portfolio-link"><i class="fa fa-search"></i></a>
+                    </div>
+                    <div class="row m0">
+                        <h5><a href="#">Project Title will be apear here</a></h5>
+                        <p>Webdesign</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 portfolio">
+                    <div class="row image m0">
+                        <img src="~/images/portfolio/2.jpg" alt="">
+                        <a href="~/images/portfolio/2.jpg" class="portfolio-link"><i class="fa fa-search"></i></a>
+                    </div>
+                    <div class="row m0">
+                        <h5><a href="#">Project Title will be apear here</a></h5>
+                        <p>Mobile Ui</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 portfolio">
+                    <div class="row image m0">
+                        <img src="~/images/portfolio/3.jpg" alt="">
+                        <a href="~/images/portfolio/3.jpg" class="portfolio-link"><i class="fa fa-search"></i></a>
+                    </div>
+                    <div class="row m0">
+                        <h5><a href="#">Project Title will be apear here</a></h5>
+                        <p>Web Site</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row col6">
+                <div class="sectionTitle">
+                    <h5>Gurur Tablomuz</h5>
+                    <h2>Referanslar</h2>
+                </div>
+                <div class="col-sm-6 portfolio">
+                    <div class="row image m0">
+                        <img src="~/images/portfolio/7.jpg" alt="">
+                        <a href="~/images/portfolio/7.jpg" class="portfolio-link"><i class="fa fa-search"></i></a>
+                    </div>
+                    <div class="row m0">
+                        <h5><a href="#">Project Title will be apear here</a></h5>
+                        <p>Wordpress, Magento</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 portfolio">
+                    <div class="row image m0">
+                        <img src="~/images/portfolio/8.jpg" alt="">
+                        <a href="~/images/portfolio/8.jpg" class="portfolio-link"><i class="fa fa-search"></i></a>
+                    </div>
+                    <div class="row m0">
+                        <h5><a href="#">Project Title will be apear here</a></h5>
+                        <p>Html5, Css3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+}

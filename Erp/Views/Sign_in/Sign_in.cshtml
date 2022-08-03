@@ -1,0 +1,229 @@
+﻿@model Erp.Models.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Giriş Yap</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <!--Favicons-->
+    <link rel="apple-touch-icon" sizes="57x57" href="~/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="~/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="~/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="~/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="~/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="~/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="~/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="~/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="~/favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="~/favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="~/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="~/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="~/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#e74c3c">
+    <meta name="msapplication-TileImage" content="~/favicon/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#e74c3c">
+
+    <!--Font awasome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/bootstrap-theme.min.css" />
+
+    <!--Loader-->
+    <link rel="stylesheet" href="~/css/spinners.css" />
+
+
+    <!-- Vendors -->
+    <link rel="stylesheet" href="~/vendors/owl.carousel/owl.carousel.css" />
+    <link rel="stylesheet" href="~/vendors/simple-line-icons/css/simple-line-icons.css" />
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/vendors/lineariconsFree/style.css" />
+    <link rel="stylesheet" href="~/css/magnific-popup.css" />
+
+    <!--Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,100,300,400italic,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!--Theme Styles-->
+    <link rel="stylesheet" href="~/css/default/style.css" />
+    <link rel="stylesheet" href="~/css/responsive/responsive.css" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body class="home">
+
+    <div class="preloader">
+        <div class="dots-loader">Yükleniyor ...</div>
+    </div>
+    @*<section class="row top_header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 ">Yeni Nesil Web ERP, Sizin İçin Herşeyi Düşündük...</div>
+                    <div class="col-sm-6">
+                        <ul class="nav nav-pills">
+                            <li><a href="tel:0 256 518 57 58"><i class="icon-call-out"></i>0 256 518 57 58</a></li>
+                            <li><a href="mailto:info@egeyazilim.net"><i class="icon-envelope"></i>info@egeyazilim.net</a></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>*@
+
+    <div class="container-login100" style="background-image: url('~/images/bg-01.jpg');">
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+            <div class="login100-form validate-form">
+                <div class="login100-form-title p-b-37">
+                    <a href=" @Url.Action("Index","Home")"><img src="~/images/logo13.png" /></a><hr />
+                    <h3>Giriş Yap</h3>
+                    <hr />
+                    <h5> Henüz Hesabın Yok Mu ?  <a href=" @Url.Action("Register","Register")"> <font color="#f8af0c"><u> Koydol</u></font></a></h5>
+                </div>
+            </div>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+            <div class="form-horizontal">
+
+                <div style="color:red;">
+                    @ViewBag.LoginError
+                </div>
+
+                <br />
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "wrap-input100 validate-input m-b-25" } })
+                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <i id="i" style="margin-top:16px;" class="fas fa-eye-slash" onclick="togglePassword()"></i>
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "wrap-input100 validate-input m-b-25" } })
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+                    </div>
+                </div>
+                <script>
+                    function togglePassword() {
+                        var element = document.getElementById('Password');
+                        var element1 = document.getElementById('i');
+                        element.type = (element.type == 'text' ? 'Password' : 'text');
+                        element1.className = (element1.className == 'fas fa-eye' ? 'fas fa-eye-slash' : 'fas fa-eye');
+                    }
+                </script>
+
+                <center>
+                    <div class="form-group u">
+                        <div class="col-md-offset-2 col-md-10 ">
+                            <input type="submit" value="Giriş Yap" class="login100-form-btn" />
+                        </div>
+                    </div>
+                </center>
+                @if (Request.Cookies["passwordforget"] != null)
+                {
+                <center>
+                    <div class="form-group u">
+                        <div class="col-md-offset-2 col-md-10 ">
+                            <a style="margin-top:20px;" href=" @Url.Action("EnterUserName","PasswordForgot")"><u> Şifreni mi unuttun ?</u></a>
+                        </div>
+                    </div>
+                </center>
+                }
+            </div>
+            }
+        </div>
+    </div>
+
+
+
+
+
+    <div id="dropDownSelect1"></div>
+
+    <!--===============================================================================================-->
+    <script src="~/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendor/daterangepicker/moment.min.js"></script>
+    <script src="~/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/js/main.js"></script>
+
+    <!--jQuery, Bootstrap and other vendor JS-->
+    <!--jQuery-->
+    <script src="~/js/jquery-2.1.4.min.js"></script>
+
+    <!--Bootstrap JS-->
+    <script src="~/js/bootstrap.min.js"></script>
+
+    <!--Bootstrap Select-->
+    <script src="~/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+
+    <!--Owl Carousel-->
+    <script src="~/vendors/owl.carousel/owl.carousel.min.js"></script>
+
+    <!--Waypoints-->
+    <script src="~/vendors/waypoints/waypoints.min.js"></script>
+
+    <!--Counter Up-->
+    <script src="~/vendors/counterup/jquery.counterup.min.js"></script>
+
+    <!--Magnific Popup-->
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+
+    <!--Isotope-->
+    <script src="~/vendors/isotope/isotope.min.js"></script>
+
+    <!--Isotope-->
+    <script src="~/vendors/infinitescrol/jquery.infinitescroll.min.js"></script>
+
+    <!--Theme JS-->
+    <script src="~/js/theme.js"></script>
+
+</body>
+</html>

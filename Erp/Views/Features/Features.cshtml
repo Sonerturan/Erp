@@ -1,0 +1,484 @@
+﻿
+@{
+    ViewBag.Title = "Features";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section Title
+{
+    Özellikler
+}
+
+@section Body
+{
+
+
+    <section class="row page_header">
+        <div class="container">
+            <h3 class="transparan">Özellikler</h3>
+            <ol class="breadcrumb">
+                <li>@Html.ActionLink("Anasayfa", "Index", "Home")</li>
+                <li class="active">Özellikler</li>
+            </ol>
+        </div>
+    </section>
+
+
+
+    <section class="row featureTab">
+        <div class="row feature_tab_menu m0">
+            <div class="container">
+                <div class="row">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#featureT1" aria-controls="featureT1" role="tab" data-toggle="tab">
+                                <img src="~/images/icons/feature/1.png" alt="" class="icon">technology
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#featureT2" aria-controls="featureT2" role="tab" data-toggle="tab">
+                                <img src="~/images/icons/feature/2.png" alt="" class="icon">api
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#featureT3" aria-controls="featureT3" role="tab" data-toggle="tab">
+                                <img src="~/images/icons/feature/3.png" alt="" class="icon">control <br> panel
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#featureT4" aria-controls="featureT4" role="tab" data-toggle="tab">
+                                <img src="~/images/icons/feature/4.png" alt="" class="icon">distros &amp; <br> 1 click apps
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row m0 featureTab_contents">
+            <div class="tab-content">
+                <div class="tab-pane active" role="tabpanel" id="featureT1">
+                    <div class="content_row row m0">
+                        <div class="container">
+                            <div class="row sectionTitle">
+                                <h5>technology</h5>
+                                <h2>ssd-only cloud</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-7">
+                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. </p>
+                                    <a href="#" class="btn btn-primary">get started</a>
+                                </div>
+                                <div class="col-sm-5 img_part">
+                                    <img src="~/images/icons/feature/5.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="content_row content_row2 whats_under_hood row m0">
+                        <div class="container">
+                            <div class="row sectionTitle">
+                                <h5 class="transparan">technology</h5>
+                                <h2 class="transparan">what's under the hood?</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/7.png" alt=""></div>
+                                    <h5>55 Second Provisioning</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/8.png" alt=""></div>
+                                    <h5>ssd hard drives</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/9.png" alt=""></div>
+                                    <h5>simple control panel</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/10.png" alt=""></div>
+                                    <h5>kvm virtualization</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/11.png" alt=""></div>
+                                    <h5>tier-1 bandwidth</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/12.png" alt=""></div>
+                                    <h5>amazing hardware</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content_row content_row3 row m0">
+                        <div class="container">
+                            <div class="col-sm-4 tech_feature">
+                                <div class="inner row m0">
+                                    <h4>Technology</h4>
+                                    <h3>private networking</h3>
+                                    <div class="icon m0 row"><img src="~/images/icons/feature/13.png" alt=""></div>
+                                    <a href="#" class="btn btn-primary">Daha Fazla</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 tech_feature">
+                                <div class="inner row m0">
+                                    <h4>Technology</h4>
+                                    <h3>simple api</h3>
+                                    <div class="icon m0 row"><img src="~/images/icons/feature/14.png" alt=""></div>
+                                    <a href="#" class="btn btn-primary">Daha Fazla</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 tech_feature">
+                                <div class="inner row m0">
+                                    <h4>Technology</h4>
+                                    <h3>ipv6 support</h3>
+                                    <div class="icon m0 row"><img src="~/images/icons/feature/15.png" alt=""></div>
+                                    <a href="#" class="btn btn-primary">Daha Fazla</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_row  whats_under_hood row m0">
+                        <div class="container">
+                            <div class="row sectionTitle">
+                                <h5>technology</h5>
+                                <h2>transfer globally</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 img_part">
+                                    <img src="~/images/icons/feature/6.png" alt="">
+                                </div>
+                                <div class="col-sm-6">
+                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. </p>
+                                    <a href="#" class="btn btn-primary">get started</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="featureT2">
+                    <div class="content_row row m0">
+                        <div class="container">
+                            <div class="row sectionTitle">
+                                <h5>api</h5>
+                                <h2>ssd-only cloud</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5 img_part">
+                                    <img src="~/images/icons/feature/5.png" alt="">
+                                </div>
+                                <div class="col-sm-7">
+                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. </p>
+                                    <a href="#" class="btn btn-primary">get started</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_row content_row2 whats_under_hood row m0">
+                        <div class="container">
+                            <div class="row sectionTitle">
+                                <h5>api</h5>
+                                <h2>what's under the hood?</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/7.png" alt=""></div>
+                                    <h5>55 Second Provisioning</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/8.png" alt=""></div>
+                                    <h5>ssd hard drives</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/9.png" alt=""></div>
+                                    <h5>simple control panel</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/10.png" alt=""></div>
+                                    <h5>kvm virtualization</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/11.png" alt=""></div>
+                                    <h5>tier-1 bandwidth</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/12.png" alt=""></div>
+                                    <h5>amazing hardware</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_row content_row3 row m0">
+                        <div class="container">
+                            <div class="col-sm-4 tech_feature">
+                                <div class="inner row m0">
+                                    <h4>api</h4>
+                                    <h3>private networking</h3>
+                                    <div class="icon m0 row"><img src="~/images/icons/feature/13.png" alt=""></div>
+                                    <a href="#" class="btn btn-primary">Daha Fazla</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 tech_feature">
+                                <div class="inner row m0">
+                                    <h4>Technology</h4>
+                                    <h3>simple api</h3>
+                                    <div class="icon m0 row"><img src="~/images/icons/feature/14.png" alt=""></div>
+                                    <a href="#" class="btn btn-primary">Daha Fazla</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 tech_feature">
+                                <div class="inner row m0">
+                                    <h4>Technology</h4>
+                                    <h3>ipv6 support</h3>
+                                    <div class="icon m0 row"><img src="~/images/icons/feature/15.png" alt=""></div>
+                                    <a href="#" class="btn btn-primary">Daha Fazla</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_row content_row4 whats_under_hood row m0">
+                        <div class="container">
+                            <div class="row sectionTitle">
+                                <h5>api</h5>
+                                <h2>transfer globally</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 img_part">
+                                    <img src="~/images/icons/feature/6.png" alt="">
+                                </div>
+                                <div class="col-sm-6">
+                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. </p>
+                                    <a href="#" class="btn btn-primary">get started</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="featureT3">
+                    <div class="content_row row m0">
+                        <div class="container">
+                            <div class="row sectionTitle">
+                                <h5>control panel</h5>
+                                <h2>ssd-only cloud</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-7">
+                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. </p>
+                                    <a href="#" class="btn btn-primary">get started</a>
+                                </div>
+                                <div class="col-sm-5 img_part">
+                                    <img src="~/images/icons/feature/5.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_row content_row2 whats_under_hood row m0">
+                        <div class="container">
+                            <div class="row sectionTitle">
+                                <h5>control panel</h5>
+                                <h2>what's under the hood?</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/7.png" alt=""></div>
+                                    <h5>55 Second Provisioning</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/8.png" alt=""></div>
+                                    <h5>ssd hard drives</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/9.png" alt=""></div>
+                                    <h5>simple control panel</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/10.png" alt=""></div>
+                                    <h5>kvm virtualization</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/11.png" alt=""></div>
+                                    <h5>tier-1 bandwidth</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/12.png" alt=""></div>
+                                    <h5>amazing hardware</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_row content_row3 row m0">
+                        <div class="container">
+                            <div class="col-sm-4 tech_feature">
+                                <div class="inner row m0">
+                                    <h4>control panel</h4>
+                                    <h3>private networking</h3>
+                                    <div class="icon m0 row"><img src="~/images/icons/feature/13.png" alt=""></div>
+                                    <a href="#" class="btn btn-primary">Daha Fazla</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 tech_feature">
+                                <div class="inner row m0">
+                                    <h4>Technology</h4>
+                                    <h3>simple api</h3>
+                                    <div class="icon m0 row"><img src="~/images/icons/feature/14.png" alt=""></div>
+                                    <a href="#" class="btn btn-primary">Daha Fazla</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 tech_feature">
+                                <div class="inner row m0">
+                                    <h4>Technology</h4>
+                                    <h3>ipv6 support</h3>
+                                    <div class="icon m0 row"><img src="~/images/icons/feature/15.png" alt=""></div>
+                                    <a href="#" class="btn btn-primary">Daha Fazla</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_row content_row4 row m0">
+                        <div class="container">
+                            <div class="row sectionTitle">
+                                <h5>control panel</h5>
+                                <h2>transfer globally</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 img_part">
+                                    <img src="~/images/icons/feature/6.png" alt="">
+                                </div>
+                                <div class="col-sm-6">
+                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. </p>
+                                    <a href="#" class="btn btn-primary">get started</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="featureT4">
+                    <div class="content_row row m0">
+                        <div class="container">
+                            <div class="row sectionTitle">
+                                <h5>distros &amp; 1 click apps</h5>
+                                <h2>ssd-only cloud</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5 img_part">
+                                    <img src="~/images/icons/feature/5.png" alt="">
+                                </div>
+                                <div class="col-sm-7">
+                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. </p>
+                                    <a href="#" class="btn btn-primary">get started</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_row content_row2 whats_under_hood row m0">
+                        <div class="container">
+                            <div class="row sectionTitle">
+                                <h5>distros &amp; 1 click apps</h5>
+                                <h2>what's under the hood?</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/7.png" alt=""></div>
+                                    <h5>55 Second Provisioning</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/8.png" alt=""></div>
+                                    <h5>ssd hard drives</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/9.png" alt=""></div>
+                                    <h5>simple control panel</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/10.png" alt=""></div>
+                                    <h5>kvm virtualization</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/11.png" alt=""></div>
+                                    <h5>tier-1 bandwidth</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                                <div class="col-sm-4 under_hood">
+                                    <div class="row icon m0"><img src="~/images/icons/feature/12.png" alt=""></div>
+                                    <h5>amazing hardware</h5>
+                                    <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit. Nullam eget </p>
+                                </div> <!--Under Hood-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_row content_row3 row m0">
+                        <div class="container">
+                            <div class="col-sm-4 tech_feature">
+                                <div class="inner row m0">
+                                    <h4>distros &amp; 1 click apps</h4>
+                                    <h3>private networking</h3>
+                                    <div class="icon m0 row"><img src="~/images/icons/feature/13.png" alt=""></div>
+                                    <a href="#" class="btn btn-primary">Daha Fazla</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 tech_feature">
+                                <div class="inner row m0">
+                                    <h4>Technology</h4>
+                                    <h3>simple api</h3>
+                                    <div class="icon m0 row"><img src="~/images/icons/feature/14.png" alt=""></div>
+                                    <a href="#" class="btn btn-primary">Daha Fazla</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 tech_feature">
+                                <div class="inner row m0">
+                                    <h4>Technology</h4>
+                                    <h3>ipv6 support</h3>
+                                    <div class="icon m0 row"><img src="~/images/icons/feature/15.png" alt=""></div>
+                                    <a href="#" class="btn btn-primary">Daha Fazla</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_row content_row4 row m0">
+                        <div class="container">
+                            <div class="row sectionTitle">
+                                <h5>distros &amp; 1 click apps</h5>
+                                <h2>transfer globally</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 img_part">
+                                    <img src="~/images/icons/feature/6.png" alt="">
+                                </div>
+                                <div class="col-sm-6">
+                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. </p>
+                                    <a href="#" class="btn btn-primary">get started</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+}

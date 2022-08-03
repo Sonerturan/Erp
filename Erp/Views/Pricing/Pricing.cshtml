@@ -1,0 +1,372 @@
+﻿
+@{
+    ViewBag.Title = "Pricing";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Title
+{
+    Fiyatlandırma
+}
+
+@section Body
+{
+
+    <section class="row page_header">
+        <div class="container">
+            <h3 class="transparan">Fiyatlandırma</h3>
+            <ol class="breadcrumb">
+                <li>@Html.ActionLink("Anasayfa", "Index", "Home")</li>
+                <li class="active">Fiyatlandırma</li>
+            </ol>
+        </div>
+    </section>
+    <section class="row pricing_plan_table">
+        <div class="container">
+            <div class="row sectionTitle">
+                <h5>Paketlerimiz &amp;</h5>
+                <h2>Fiyatlandırma planı</h2>
+            </div>
+            <div class="table-responsive">
+                <div class="col-sm-3 pricing_plan_cell">
+                    <div class="row plan_type">Web<br>ERP</div>
+                    <div class="row pricing_row">fiyatlandırma</div>
+                    <div class="row nav_a">
+                        <ul class="nav">
+                            <li>E-posta sayısı</li>
+                            <li>Web sitesi sayısı</li>
+                            <li>Disk alanı</li>
+                            <li>Veri tabanı yedekleme / geri yükleme</li>
+                            <li>DNS Yönetimi</li>
+                            <li>Kayıt için ücretsiz alan</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary visible-none">Satın al</a>
+                    </div>
+                </div>
+                <div class="col-sm-3 pricing_plan_cell">
+                    <div class="row plan_type silver">silver plan</div>
+                    <div class="row pricing_row">
+                        <div class="row m0 price">
+                            <span class="currencyType">$</span>
+                            <span class="amount">13</span>
+                            <small>/mo</small>
+                        </div>
+                    </div>
+                    <div class="row nav_a">
+                        <ul class="nav">
+                            <li>10 E-posta Hesabı</li>
+                            <li>03 Web Sitesi Düzeni</li>
+                            <li>100GB</li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-times"></i></li>
+                            <li><i class="fa fa-times"></i></li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Satın al</a>
+                    </div>
+                </div>
+                <div class="col-sm-3 pricing_plan_cell">
+                    <div class="row plan_type gold">gold plan <span>popular</span></div>
+                    <div class="row pricing_row">
+                        <div class="row m0 price">
+                            <span class="currencyType">$</span>
+                            <span class="amount">17</span>
+                            <small>/mo</small>
+                        </div>
+                    </div>
+                    <div class="row nav_a">
+                        <ul class="nav">
+                            <li>10 E-posta Hesabı</li>
+                            <li>03 Web Sitesi Düzeni</li>
+                            <li>100GB</li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-times"></i></li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Satın al</a>
+                    </div>
+                </div>
+                <div class="col-sm-3 pricing_plan_cell">
+                    <div class="row plan_type diamond">diamond plan</div>
+                    <div class="row pricing_row">
+                        <div class="row m0 price">
+                            <span class="currencyType">$</span>
+                            <span class="amount">19</span>
+                            <small>/mo</small>
+                        </div>
+                    </div>
+                    <div class="row nav_a">
+                        <ul class="nav">
+                            <li>10 E-posta Hesabı</li>
+                            <li>03 Web Sitesi Düzeni</li>
+                            <li>100GB</li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Satın al</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="row pricing pricing2">
+        <div class="container">
+            <div class="row sectionTitle">
+                <h5>Paketlerimiz &amp;</h5>
+                <h2>Fiyatlandırma planı</h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 price_plan">
+                    <div class="row inner m0">
+                        <div class="plan_intro">
+                            <div class="price row m0">
+                                <span class="currencyType">$</span>
+                                <span class="amount">19</span>
+                                <small>/mo</small>
+                            </div>
+                            <div class="planType row m0">
+                                <h4 class="transparan" >başlangıç plan</h4>
+                            </div>
+                        </div>
+                        <div class="row m0 service_provide_row">
+                            <ul class="nav service_provide">
+                                <li>10GB Bandwidth</li>
+                                <li>1TB Storage Space</li>
+                                <li>10 Free Sub-Domains</li>
+                                <li>Cpanel &amp; FTP</li>
+                                <li>SEO</li>
+                                <li>99.9% Uptime</li>
+                                <li>MySQL Databases</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Satın Al</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 price_plan best_plan">
+                    <div class="row inner m0">
+                        <div class="plan_intro">
+                            <div class="price row m0">
+                                <span class="currencyType">$</span>
+                                <span class="amount">29</span>
+                                <small>/mo</small>
+                            </div>
+                            <div class="planType row m0">
+                                <h4 class="transparan">business plan</h4>
+                            </div>
+                        </div>
+                        <div class="row m0 service_provide_row">
+                            <ul class="nav service_provide">
+                                <li>50GB Bandwidth</li>
+                                <li>5TB Storage Space</li>
+                                <li>100 Free Sub-Domains</li>
+                                <li>Cpanel &amp; FTP</li>
+                                <li>SEO</li>
+                                <li>99.9% Uptime</li>
+                                <li>MySQL Databases</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Satın Al</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 price_plan">
+                    <div class="row inner m0">
+                        <div class="plan_intro">
+                            <div class="price row m0">
+                                <span class="currencyType">$</span>
+                                <span class="amount">39</span>
+                                <small>/mo</small>
+                            </div>
+                            <div class="planType row m0">
+                                <h4 class="transparan">premium plan</h4>
+                            </div>
+                        </div>
+                        <div class="row m0 service_provide_row">
+                            <ul class="nav service_provide">
+                                <li>50GB Bandwidth</li>
+                                <li>10TB Storage Space</li>
+                                <li>500 Free Sub-Domains</li>
+                                <li>Cpanel &amp; FTP</li>
+                                <li>SEO</li>
+                                <li>99.9% Uptime</li>
+                                <li>MySQL Databases</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Satın Al</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="row pricing_plan_table">
+        <div class="container">
+            <div class="row sectionTitle">
+                <h5>En İyiler &amp;</h5>
+                <h2>Fiyatlandırma</h2>
+            </div>
+            <div class="table-responsive">
+                <div class="col-sm-3 pricing_plan_cell">
+                    <div class="row plan_type basic">Basic Plan</div>
+                    <div class="row pricing_row">
+                        <div class="row m0 price">
+                            <span class="currencyType">$</span>
+                            <span class="amount">10</span>
+                            <small>/mo</small>
+                        </div>
+                    </div>
+                    <div class="row nav_a">
+                        <ul class="nav">
+                            <li>10 Email Account</li>
+                            <li>03 Website Layout</li>
+                            <li>100GB</li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-times"></i></li>
+                            <li><i class="fa fa-times"></i></li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Satın Al</a>
+                    </div>
+                </div>
+                <div class="col-sm-3 pricing_plan_cell">
+                    <div class="row plan_type silver">silver plan</div>
+                    <div class="row pricing_row">
+                        <div class="row m0 price">
+                            <span class="currencyType">$</span>
+                            <span class="amount">13</span>
+                            <small>/mo</small>
+                        </div>
+                    </div>
+                    <div class="row nav_a">
+                        <ul class="nav">
+                            <li>10 Email Account</li>
+                            <li>03 Website Layout</li>
+                            <li>100GB</li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-times"></i></li>
+                            <li><i class="fa fa-times"></i></li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Satın Al</a>
+                    </div>
+                </div>
+                <div class="col-sm-3 pricing_plan_cell">
+                    <div class="row plan_type gold">gold plan <span>popular</span></div>
+                    <div class="row pricing_row">
+                        <div class="row m0 price">
+                            <span class="currencyType">$</span>
+                            <span class="amount">17</span>
+                            <small>/mo</small>
+                        </div>
+                    </div>
+                    <div class="row nav_a">
+                        <ul class="nav">
+                            <li>10 Email Account</li>
+                            <li>03 Website Layout</li>
+                            <li>100GB</li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-times"></i></li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Satın Al</a>
+                    </div>
+                </div>
+                <div class="col-sm-3 pricing_plan_cell">
+                    <div class="row plan_type diamond">diamond plan</div>
+                    <div class="row pricing_row">
+                        <div   class="row m0 price">
+                            <span  class="currencyType">$</span>
+                            <span class="amount">19</span>
+                            <small>/mo</small>
+                        </div>
+                    </div>
+                    <div class="row nav_a">
+                        <ul class="nav">
+                            <li>10 Email Account</li>
+                            <li>03 Website Layout</li>
+                            <li>100GB</li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+
+
+                            <li><i class="fa fa-check"></i></li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Satın Al</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="row pricing">
+        <div class="container">
+            <div class="row sectionTitle">
+                <h5>Tüm Paketler &amp;</h5>
+                <h2>Bir Göz Atalım</h2>
+            </div>
+            <div class="owl-carousel pricing_plan">
+                <div class="item">
+                    <div class="row m0 plan">
+                        <div class="price row m0">
+                            <span class="currencyType">$</span>
+                            <span class="amount">19</span>
+                            <small>/mo</small>
+                        </div>
+                        <div class="serviceType row m0">
+                            <h4>dedicated hosting</h4>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit.</p>
+                        <a href="#" class="btn btn-primary">Satın Al</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="row m0 plan">
+                        <div class="price row m0">
+                            <span class="currencyType">$</span>
+                            <span class="amount">29</span>
+                            <small>/mo</small>
+                        </div>
+                        <div class="serviceType row m0">
+                            <h4>VPS hosting</h4>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit.</p>
+                        <a href="#" class="btn btn-primary">Satın Al</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="row m0 plan">
+                        <div class="price row m0">
+                            <span class="currencyType">$</span>
+                            <span class="amount">39</span>
+                            <small>/mo</small>
+                        </div>
+                        <div class="serviceType row m0">
+                            <h4>shared hosting</h4>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit.</p>
+                        <a href="#" class="btn btn-primary">Satın Al</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="row m0 plan">
+                        <div class="price row m0">
+                            <span class="currencyType">$</span>
+                            <span class="amount">49</span>
+                            <small>/mo</small>
+                        </div>
+                        <div class="serviceType row m0">
+                            <h4>reseller hosting</h4>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, ectetur adipiscing elit.</p>
+                        <a href="#" class="btn btn-primary">Satın Al</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row pricing_nav">
+                <div class="col-sm-4 col-sm-offset-4">
+                    <div id="pricing_nav" class="row m0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="row pricing_bottom"></section>
+
+
+}

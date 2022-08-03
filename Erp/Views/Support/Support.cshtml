@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "Support";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Title
+{
+    Destek
+}
+
+@section Body
+{
+
+<section class="row page_header">
+    <div class="container">
+        <h3>Destek</h3>
+        <ol class="breadcrumb">
+            <li>@Html.ActionLink("Anasayfa", "Index", "Home")</li>
+            <li class="active">Destek</li>
+        </ol>
+    </div>
+</section>
+
+<section class="row service_tabs_list">
+    <div class="row m0 service_tab service_tab1">
+        <div class="container">
+            <div class="row sectionTitle">
+                <h5>Destek İçin</h5>
+                <h2>İndirin</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <center>
+                        <img align="center" src="~/images/support/team.png" alt="Alternate Text" />
+                        <br /><br />
+                        <h3>TEAMVİEWER</h3>
+                        <br />
+                        <p> Programı Bilgisayarınıza İndirip Kurduktan Sonra Bizimle İletişime Geçiniz.</p>
+                        <br /><br /><br />
+                        <a href="http://download.teamviewer.com/download/TeamViewer_Setup_tr.exe" class="btn btn-primary">İndir</a>
+                        
+                    </center>
+                </div>
+                <div class="col-md-3">
+                    <center>
+                        <img align="center" src="~/images/support/ammyy.png" alt="Alternate Text" />
+                        <br /><br />
+                        <h3>AMMYY</h3>
+                        <br />
+                        <p> Programı Bilgisayarınıza İndirip Kurduktan Sonra Bizimle İletişime Geçiniz.</p>
+                        <br /><br /><br />
+                        <a href="http://www.ammyy.com/AA_v3.exe" class="btn btn-primary">İndir</a>
+                    </center>
+                </div>
+                <div class="col-md-3">
+                    <center>
+                        <img align="center" src="~/images/support/skype.png" alt="Alternate Text" />
+                        <br /><br />
+                        <h3>Skype</h3>
+                        <br />
+                        <p> Programı Bilgisayarınıza İndirip Kurduktan Sonra Bizimle İletişime Geçiniz.</p>
+                        <br /><br /><br />
+                        <a id="autoDownload" href="http://www.skype.com/go/getskype" class="btn btn-primary">İndir </a>
+                    </center>
+                </div>
+                <div class="col-md-3">
+                    <center>
+                        <img align="center" src="~/images/support/alpemix.png" alt="Alternate Text" />
+                        <br /><br />
+                        <h3>ALPEMİX</h3>
+                        <br />
+                        <p> Programı Bilgisayarınıza İndirip Kurduktan Sonra Bizimle İletişime Geçiniz.</p>
+                        <br /><br /><br />
+                        <a href="http://www.alpemix.com/site/Alpemix.exe" class="btn btn-primary">İndir</a>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+
+}
